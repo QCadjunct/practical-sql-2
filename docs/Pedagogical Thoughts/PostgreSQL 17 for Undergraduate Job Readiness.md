@@ -23,36 +23,42 @@ For teaching undergraduates, this comprehensive approach works particularly well
 If you're creating additional markdown chapters for a complete PostgreSQL textbook, consider including:
 
 ### Query Optimization and Execution Plans
+
 - Teaching students to write efficient queries
 - Understanding EXPLAIN output
 - Identifying and resolving performance bottlenecks
 - Index selection strategies
 
 ### PostgreSQL Application Development
+
 - Connecting to databases from various programming languages
 - Building applications with proper database patterns
 - Error handling and connection management
 - ORM integration considerations
 
 ### Transaction Management and Concurrency
+
 - Understanding isolation levels
 - Avoiding deadlocks and race conditions
 - Implementing optimistic and pessimistic concurrency control
 - Managing long-running transactions
 
 ### Database Administration Fundamentals
+
 - Backup and restore procedures
 - User management and security
 - Basic maintenance routines
 - Monitoring and troubleshooting
 
 ### PostgreSQL Extensions Ecosystem
+
 - Exploring PostGIS for spatial data
 - TimescaleDB for time-series applications
 - pgvector for vector similarity search
 - Custom extension development
 
 ### Migration from Other Databases
+
 - Converting schemas from MySQL, SQL Server, etc.
 - Data migration strategies and tools
 - Handling syntax and feature differences
