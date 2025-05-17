@@ -231,6 +231,7 @@ Notice how in the Domain-Driven Design example, the `Description` field has both
   - Should remain relatively stable
 
 #### Surrogate Keys
+
 - 🔑 Artificially created values with no business meaning
 - 💡 Common implementations:
   - Auto-incrementing integers using `GENERATED ALWAYS AS IDENTITY`
