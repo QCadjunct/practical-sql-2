@@ -33,6 +33,8 @@ The fundamental approach involves:
 
 Rather than deleting individual rows, this approach drops entire partitions of expired data, which is significantly faster and more efficient for large datasets.
 
+[Back to Introduction](#introduction)
+
 ## Step-by-Step Implementation
 
 ### 1. Schema Design
@@ -64,6 +66,8 @@ CREATE TABLE expiring_table_parent (
 ) PARTITION BY RANGE (expires_at);
 ```
 
+[Back to Introduction](#introduction)
+
 ### 2. Create the Partitioned Table
 
 Next, create the initial partitions for your expiring data:
@@ -78,6 +82,8 @@ CREATE TABLE expiring_table_202506
     PARTITION OF expiring_table_parent
     FOR VALUES FROM ('2025-06-01') TO ('2025-07-01');
 ```
+
+[Back to Introduction](#introduction)
 
 ### 3. Set Up pg_partman
 
@@ -104,6 +110,8 @@ This configuration:
 - Creates monthly partitions
 - Pre-creates 3 future partitions in advance
 
+[Back to Introduction](#introduction)
+
 ### 4. Create the Combined View
 
 Create a view that joins the main table with the non-expired data from the partitioned table:
@@ -124,6 +132,8 @@ WHERE
 ```
 
 This view will dynamically filter out any data that has expired, presenting only current valid data to applications.
+
+[Back to Introduction](#introduction)
 
 ### 5. Automated Maintenance
 
@@ -153,6 +163,8 @@ The maintenance job will:
 - Create new partitions as needed
 - Drop partitions that have completely expired
 - Perform other necessary maintenance tasks
+
+[Back to Introduction](#introduction)
 
 ## Example Implementation
 
@@ -232,6 +244,8 @@ VALUES (
 );
 ```
 
+[Back to Introduction](#introduction)
+
 ## Benefits and Considerations
 
 ### Benefits
@@ -264,3 +278,5 @@ This approach is particularly valuable for applications dealing with:
 - Performance-critical systems
 
 By physically removing expired data through partition dropping rather than row deletion, you can achieve both compliance and performance benefits while maintaining your core data integrity.
+
+[Back to Introduction](#introduction)
